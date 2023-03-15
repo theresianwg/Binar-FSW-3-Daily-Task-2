@@ -493,6 +493,7 @@ console.log('------- Jawaban Nomor 4 -------');
   });
 
 // 5) display friends yang gender nya male dan mempunyai hobby 
+// masih tidak keluar
 console.log('------- Jawaban Nomor 5 -------');
   const maleBasketballFriends = data.flatMap(person => person.friends) // membuat array flat dari semua teman di setiap person
                                       .filter(friend => friend.gender === "male") // filter teman yang gender nya male
