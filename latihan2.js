@@ -434,7 +434,7 @@ let Arr = []
 // 1) display/print person yang registered dibawah tahun 2022
 
 // 2) display person yang address nya Bali 
-for (let i = 0; i < data.length; i++) {
+// for (let i = 0; i < data.length; i++) {
 console.log(data.find(({address})=> address === 'Bali'));
 // const cari = data.filter(address => address.includes('Bali'));
 // console.log(cari);
@@ -443,18 +443,18 @@ console.log(data.find(({address})=> address === 'Bali'));
 // console.log(cariArr);
 
 
-data.forEach( (e)=> {
-    keys = Object.keys(e)
-    address = keys.forEach(
-    (e)=> {
-      if (e.includes('Bali')) {
-        arr.push(e)
-      }
-    })
-  })
+// data.forEach( (e)=> {
+//     keys = Object.keys(e)
+//     address = keys.forEach(
+//     (e)=> {
+//       if (e.includes('Bali')) {
+//         arr.push(e)
+//       }
+//     })
+//   })
   
-  console.log(address)
-}
+//   console.log(address)
+// }
 // }
 
 // 3) display friends yang hobby nya football
