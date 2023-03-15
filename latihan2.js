@@ -430,12 +430,24 @@ const data = [
 
 // wajib ada yang menggunakan array method FIND, FILTER atau MAP dalam pengerjaannya.
 
-let Arr = []
+let arr=[]
 // 1) display/print person yang registered dibawah tahun 2022
+console.log('------- Jawaban Nomor 1 -------');
+    // ga keluar output
+      // const filteredData = data.filter(person => new Date(person.registered).getFullYear() < 2022);
+      // console.log(filteredData);
+
+    for (let i=0; i < data.length; i++){
+      if (data[i].registered > '2022'){
+          arr.push(data[i])
+              console.log(data[i].name);
+      }
+}
 
 // 2) display person yang address nya Bali 
-for (let i = 0; i < data.length; i++) {
-console.log(data.find(({address})=> address === 'Bali'));
+console.log('------- Jawaban Nomor 2 -------');
+// for (let i = 0; i < data.length; i++) {
+// console.log(data.find(({address})=> address === 'Bali'));
 // const cari = data.filter(address => address.includes('Bali'));
 // console.log(cari);
 
@@ -443,23 +455,56 @@ console.log(data.find(({address})=> address === 'Bali'));
 // console.log(cariArr);
 
 
-data.forEach( (e)=> {
-    keys = Object.keys(e)
-    address = keys.forEach(
-    (e)=> {
-      if (e.includes('Bali')) {
-        arr.push(e)
-      }
-    })
-  })
+// data.forEach( (e)=> {
+//     keys = Object.keys(e)-
+//     address = keys.forEach(
+//     (e)=> {
+//       if (e.includes('Bali')) {
+//         arr.push(e)
+//       }
+//     })
+//   })
   
-  console.log(address)
-}
+//   console.log(address)
+// }
 // }
 
+  for (let i = 0; i < data.length; i++){
+    Arr = data[i].address === 'Bali'
+    if (Arr == true){
+        console.log(data[i]);
+    }
+  }
+
 // 3) display friends yang hobby nya football
+console.log('------- Jawaban Nomor 3 -------');
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].friends.length; j++) {
+      for (let k = 0; k < data[i].friends[j].hobby.length; k++) {
+        if (data[i].friends[j].hobby[k].hobby === "football") {
+          console.log(data[i].friends[j].name);
+        }
+      }
+    }
+  }
 // 4) display hobby dari friends id 2
-// 5) display friends yang gender nya male dan mempunya hobby basketball
+console.log('------- Jawaban Nomor 4 -------');
+  data.forEach((person) => {
+    const friendWithId2 = person.friends.filter((friend) => friend.id === 2);
+    console.log(`${person.name}'s friend with id 2 hobbies:`);
+    friendWithId2.forEach((friend) =>
+      friend.hobby.forEach((hobby) => console.log(hobby.hobby))
+    );
+  });
+
+// 5) display friends yang gender nya male dan mempunyai hobby 
+console.log('------- Jawaban Nomor 5 -------');
+  const maleBasketballFriends = data.flatMap(person => person.friends) // membuat array flat dari semua teman di setiap person
+                                      .filter(friend => friend.gender === "male") // filter teman yang gender nya male
+                                      .filter(friend => friend.hobby.find(h => h.hobby === "basketball")) // filter teman yang mempunyai hobby basketball
+
+  console.log(maleBasketballFriends)
+
 // 6) display friends yang isActive nya true dan gender nya female dan favorite fruit nya strawberry
 // 7) display siapa saja yang mempunya teman name Theresia
 // 8) display hobby id 1 dari friends yang isActive nya true
