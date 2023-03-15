@@ -445,35 +445,31 @@ console.log('------- Jawaban Nomor 1 -------');
 }
 
 // 2) display person yang address nya Bali 
-for (let i = 0; i < data.length; i++) {
-console.log(data.find(({address})=> address === 'Bali'));
+console.log('------- Jawaban Nomor 2 -------');
+// for (let i = 0; i < data.length; i++) {
+// console.log(data.find(({address})=> address === 'Bali'));
 // const cari = data.filter(address => address.includes('Bali'));
 // console.log(cari);
 
 // var cariArr = data.filter(el => Object.keys(el)[0].includes('Bali'))
 // console.log(cariArr);
 
-
-data.forEach( (e)=> {
-    keys = Object.keys(e)
-    address = keys.forEach(
-    (e)=> {
-      if (e.includes('Bali')) {
-        arr.push(e)
-      }
-    })
-  })
-  
 //   console.log(address)
 // }
 // }
 
+  // for (let i = 0; i < data.length; i++){
+  //   Arr = data[i].address === 'Bali'
+  //   if (Arr == true){
+  //       console.log(data[i]);
+  //   }
+  // }
+
   for (let i = 0; i < data.length; i++){
-    Arr = data[i].address === 'Bali'
-    if (Arr == true){
+    if (data[i].address.includes("Bali")){
         console.log(data[i]);
     }
-  }
+ }
 
 // 3) display friends yang hobby nya football
 console.log('------- Jawaban Nomor 3 -------');
@@ -509,55 +505,3 @@ console.log('------- Jawaban Nomor 5 -------');
 // 8) display hobby id 1 dari friends yang isActive nya true
 // 9) display person yang eye color nya brown dan favorite fruit nya banana dan mempunyai teman hobby basketball
 // 10) display person yang mempunya friends gender male atau favorite fruit nya banana dan registered di tahun 2023
-
-// // print person yang mengandung huruf W di name nya
-// for (let i = 0; i < person.length; i++) {
-//     if (person[i].name.includes("W")) {
-//       // console.log(person[i])
-//     };
-//   }
-
-//   // Array numbers
-//   let arr =  [1, 2, 3, 4, 5, 6, 7]
-//   // console.log(`panjang index dari array ini : ${arr.length}`);
-
-//   // console.log(`Isi dari array ini adalah ${arr}`);
-
-//   // Object
-//   // let obj = {
-//   //   name: 'Imam',
-//   //   age: 22,
-//   //   city: 'Bandung'
-//   // }
-
-//   // console.log(obj);
-
-//   // Array of Object
-//   let arrObj = [
-//     {
-//       name: 'Imam',
-//       age: 22,
-//       city: 'Bandung'
-//     },
-//     {
-//       name: 'Ferdy',
-//       age: 18,
-//       city: 'Mars',
-//       hobby: [
-//         'futsal',
-//         'anime',
-//         'belajar'
-//       ]
-//     },
-//     {
-//       name: 'Fauzi',
-//       age: 16,
-//       city: 'Pluto'
-//     }
-//   ]
-
-// // Memanggil umur dari index kedua 
-// // console.log(arrObj[2].age);
-
-// // Memanggil hobby kedua dari index kedua arrObj
-// console.log(arrObj[1].hobby[0]);
