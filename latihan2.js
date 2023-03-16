@@ -501,8 +501,16 @@ console.log('------- Jawaban Nomor 5 -------');
 
   console.log(maleBasketballFriends)
 
+
 // 6) display friends yang isActive nya true dan gender nya female dan favorite fruit nya strawberry
+console.log('------- Jawaban Nomor 6 -------');
+  const hasil= data.flatMap(person => person.friends)
+                                      .filter(friend => friend.gender === "female")
+                                      .filter(friend => friend.isActive === true)
+                                      .filter(friend => friend.favoriteFruit === "strawberry")
+      console.log(hasil)
 // 7) display siapa saja yang mempunya teman name Theresia
 // 8) display hobby id 1 dari friends yang isActive nya true
 // 9) display person yang eye color nya brown dan favorite fruit nya banana dan mempunyai teman hobby basketball
+
 // 10) display person yang mempunya friends gender male atau favorite fruit nya banana dan registered di tahun 2023
