@@ -429,26 +429,41 @@ const data = [
 ]
 
 
-function person(name, eyeColor, age, addres) {
-    // console.log(`hi, nama saya ${name}, Alamat saya berada di ${addres === 'bali'}`)
-}
+// function person(name, eyeColor, age, addres) {
+//     // console.log(`hi, nama saya ${name}, Alamat saya berada di ${addres === 'bali'}`)
+// }
 
-function chekcAddress(address) { 
-    return address === "bali" 
-} 
+// function chekcAddress(address) { 
+//     return address === "bali" 
+// } 
  
-person("Stewart Clark", "brown", 20, "bali")
-person("Charmaine Mcbride", "blue", 21, "surabaya")
-person("Kristin Glass","green", 10, "bali")
-person("Owens Ellison","brown", 21, "gresik")
-person("Lucile Collins", "blue", 10, "bandung")
+// person("Stewart Clark", "brown", 20, "bali")
+// person("Charmaine Mcbride", "blue", 21, "surabaya")
+// person("Kristin Glass","green", 10, "bali")
+// person("Owens Ellison","brown", 21, "gresik")
+// person("Lucile Collins", "blue", 10, "bandung")
 
-function loopingData(person) { 
-    let arr = [] 
-    for (let i = 0; i < person.length; i++) { 
-        if (chekcAddress(person[i].address)) { 
-            arr.push(person[i]) 
-            console.log(person[i].address) 
-        } 
+// function loopingData(person) { 
+//     let arr = [] 
+//     for (let i = 0; i < person.length; i++) { 
+//         if (chekcAddress(person[i].address)) { 
+//             arr.push(person[i]) 
+//             console.log(person[i].address) 
+//         } 
+//     }
+// }
+
+// 1) display person yang address nya Bali 
+    console.log('------- Jawaban Nomor 1 -------');
+    function cariAlamatBali(data) {
+        return data.filter(person => person.address === "Bali")
+                .map(person => ({ ...person, address: "Bali" }));
     }
-}
+
+    const orangAlamatBali = cariAlamatBali(data);
+    console.log(orangAlamatBali);
+
+// 2) display friends yang hobby nya football
+    console.log('------- Jawaban Nomor 2 -------');
+
+  
